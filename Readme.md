@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Игорь Гуль](https://up.htmlacademy.ru/htmlcss/19/user/567775).
-* Наставник: `Неизвестно`.
+* Наставник: [Илья Туров](https://htmlacademy.ru/profile/turov)
 
 ---
 
