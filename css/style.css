@@ -1,0 +1,96 @@
+@font-face {
+	font-family: "PT Sans";
+	src: url("../fonts/ptsans.woff2"), url("../fonts/ptsans.woff");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "PT Sans";
+	src: url("../fonts/ptsansbold.woff2"), url("../fonts/ptsansbold.woff");
+	font-weight: bold;
+}
+
+body {
+	width: 100%;
+ 	font-family: "PT Sans", Arial, sans-serif;
+  	font-size: 14px;
+  	line-height: 24px;
+  	color: #000000;
+  	text-transform: uppercase;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	min-width: 768px;
+	background-color: #ffffff;
+  	box-shadow: 0 0 40px 2px #dbdbdb;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+.navigation-item a {
+	color: #000;
+	font-weight: bold;
+}
+
+.main,
+.promo-background {
+	width: 100%;
+}
+
+.promo-background {
+	padding: 75px 0;
+	text-align: center;
+	position: relative;
+	background: #2a404e url(../img/sedona-bg.jpg) no-repeat;
+	background-position: right -55px;
+}
+
+.promo-background::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 1200px;
+	height: 57px;
+	background: url('../img/sedona-bg-bottom.png') no-repeat;
+}
+
+.container-features-item {
+	text-align: center;
+	background: #81b3d2;
+	padding: 45px 0 60px;
+}
+
+.container-features-item h2,
+.container-features-item span,
+.container-features-item p {
+	color: #fff;
+}
+
+.container-features-item h2,
+.reason-features-list h2 {
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.container-reserve b {
+	font-size: 30px;
+	font-weight: bold;
+}
+	
