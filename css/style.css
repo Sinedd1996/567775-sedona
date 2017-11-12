@@ -39,7 +39,13 @@ a {
 	text-decoration: none;
 }
 
-ul,ol {
+.site-navigation,
+.reason-features-list,
+.reasons-list,
+.navigation-footer,
+.navigation-search,
+.arrows,
+.rate-stars {
 	list-style: none;
 }
 
