@@ -15,7 +15,7 @@
 						<li class="navigation-item"><a href="#">информация</a></li>
 						<li class="navigation-item"><a href="#">фото и видео</a></li>
 						<li class="navigation-item"><a href="#">карта штата</a></li>
-						<li class="navigation-item"><a href="#">Гостиницы</a></li>
+						<li class="navigation-item"><a href="#" class="active">Гостиницы</a></li>
 					</ul>
 				</nav>
 		</header>
@@ -23,7 +23,7 @@
 			<div class="filters">
 				<form action="https://echo.htmlacademy.ru" method="post">
 					<fieldset>
-						<legend>Инфрастрктура:</legend>	
+						<legend class="form-title">Инфрастрктура:</legend>	
 							<label for="pool-field">
 								<input type="checkbox" id="pool-field" name="pool" cheked>Бассейн
 							</label>
@@ -35,7 +35,7 @@
 							</label>
 					</fieldset>
 					<fieldset>
-						<legend>Тип жилья:</legend>		
+						<legend class="form-title">Тип жилья:</legend>		
 							<label for="hotel-field">
 								<input type="checkbox" id="hotel-field" name="hotel" cheked>Гостиница
 							</label>
@@ -47,8 +47,8 @@
 							</label>
 					</fieldset>
 					<fieldset>
-						<legend>Стоимость в сутки(Р):</legend>
-						<button>Показать</button>	
+						<legend class="form-title">Стоимость в сутки(Р):</legend>
+						<button class="btn-form">Показать</button>	
 					</fieldset>
 				</form>
 			</div>	
@@ -56,13 +56,13 @@
 				<span class="found-search">Найдено: 3</span>
 				<p>Сортировка:</p>
 				<ul class="navigation-search">
-					<li><a href="#">По цене</a></li>
+					<li><a href="#" class="search-active">По цене</a></li>
 					<li><a href="#">По типу</a></li>
 					<li><a href="#">По рейтингу</a></li>
 				</ul>
 				<ul class="arrows">
-					<li><a href="#">По возрастанию</a></li>
-					<li><a href="#">По убыванию</a></li>
+					<li><a href="#" class="visually-hidden ">По возрастанию</a></li>
+					<li><a href="#" class="visually-hidden ">По убыванию</a></li>
 				</ul>
 			</div>
 
@@ -92,7 +92,7 @@
 				<figcaption>
 					<h2>Desert Quail Inn</h2>
 					<p>Мотель<span>От 3000 р.</span></p>
-					<a href="#" class="container-button">Подробнее</a>
+					<a href="#" class="container-button-blue">Подробнее</a>
 					<a href="#"class="container-button-brown">Забронировать</a>
 
 					<div class="container-rate">
@@ -101,7 +101,7 @@
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
 						</ul>
-						<span class="raiting">Рейтинг:8,9</span>>
+						<span class="raiting">Рейтинг:8,9</span>
 					</div>
 				</figcaption>
 			</figure>
@@ -111,7 +111,7 @@
 				<figcaption>
 					<h2>Villas at Poco Diablo</h2>
 					<p>Апартаменты <span>От 2000 р.</span></p>
-					<a href="#" class="container-button">Подробнее</a>
+					<a href="#" class="container-button-blue">Подробнее</a>
 					<a href="#"class="container-button-brown">Забронировать</a>
 
 					<div class="container-rate">
@@ -119,7 +119,7 @@
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
 						</ul>
-						<span class="raiting">Рейтинг:9,2</span>>
+						<span class="raiting">Рейтинг:9,2</span>
 					</div>
 				</figcaption>
 			</figure>

@@ -5,6 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   </head>
   <body>
   	<div class="wrapper">
@@ -30,7 +31,7 @@
 				</div>
 				
 				<section>
-					<h2>Причины посетить седону</h2>
+					<h2 class="visually-hidden">Причины посетить седону</h2>
 					<ol class="reasons-list">	
 						<li>
 							<div class="container-features-item">
@@ -66,17 +67,17 @@
 								<span>№2</span>
 								<p>Да, но по нему можно пройти! Если конечно вы осмелитесь</p>
 							</div>
-						<li>
+						<li class="reasons-list-footer">
 							<h2>Не большая площадь</h2>
 							<span class="number">№3</span>
 							<p>Все достопримечательностинаходятся очень близко</p>
 						</li>
-						<li>
+						<li class="reasons-list-footer">
 							<h2>Красивая дорога</h2>
 							<span class="number">№4</span>
 							<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
 						</li>
-						<li>
+						<li class="reasons-list-footer">
 							<h2>Мало туристов</h2>
 							<span class="number">№5</span>
 							<p>Большинство едет в гран каньон и толпится там</p>
@@ -102,15 +103,15 @@
 						</div>
 						<div>
 							<label for="grownups">Взрослые:
-								<button class="button-reduce" type="button"><span class="visually-hidden">По убыванию</span></button>
+								<button class="button-reduce" type="button"><span class="visually-hidden">Уменьшает количество взрослых по убыванию</span></button>
 								<div><input type="text" value="2" id="grownups" name="grownups"></div>
-								<button class="button-approximate" type="button"><span class="visually-hidden">По нарастанию</span></button>
+								<button class="button-approximate" type="button"><span class="visually-hidden">Увеличивает количество взрослых по возрастанию</span></button>
 							</label>
 						
 							<label for="kids">Дети:
-								<button class="button-reduce" type="button"><span class="visually-hidden">По убыванию</span></button>
+								<button class="button-reduce" type="button"><span class="visually-hidden">Уменьшает количество детей по убыванию</span></button>
 								<input type="text" id="kids" name="kids" value="0">
-								<button class="button-approximate" type="button"><span class="visually-hidden">По нарастанию</span></button>
+								<button class="button-approximate" type="button"><span class="visually-hidden">Увеличивает количество детей по возрастанию</span></button>
 							</label>
 						</div>
 						<input type="submit" value="Найти">
@@ -125,7 +126,6 @@
 
 		<footer class="main-footer">
 				<p>#Visitsedona</p>
-				<div class="footer-social">
 					<ul class="navigation-footer">
 						<li>
 							<a href="#" class="social-button">
@@ -146,7 +146,6 @@
 							</a>
 						</li>
 					</ul>
-				</div>
 				<p class="footer-copyright">
 					<b>Website by</b>
 					<a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="115" height="45" alt="htmlacademy.ru"></a>

@@ -19,6 +19,10 @@ body {
   	text-transform: uppercase;
 }
 
+button {
+	text-transform: uppercase;
+}
+
 .visually-hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);
@@ -37,6 +41,17 @@ body {
 
 a {
 	text-decoration: none;
+}
+
+:focus {
+	outline: 0;
+	border-radius: 5px;
+	box-shadow: 0 0 0 2px white,
+				0 0 3px 5px #81b3d2;						
+}
+
+fieldset {
+	border: none;
 }
 
 .site-navigation,
@@ -58,10 +73,17 @@ a {
 .promo-background {
 	width: 100%;
 }
+.promo-background,
+.promo-title,
+.container-features-item,
+.reason-features-list,
+.reasons-list-footer,
+.container-reserve{
+	text-align: center;
+}
 
 .promo-background {
 	padding: 75px 0;
-	text-align: center;
 	position: relative;
 	background: #2a404e url(../img/sedona-bg.jpg) no-repeat;
 	background-position: right -55px;
@@ -77,26 +99,130 @@ a {
 	background: url('../img/sedona-bg-bottom.png') no-repeat;
 }
 
+.reasons-list {
+	padding: 0;
+}
+
+.promo-title h1,
+.reasons-list-footer h2,
+input[type="submit"],
+.btn-open-search,
+.found-search{
+	font-size: 21px;
+	font-weight: bold;
+}
+
 .container-features-item {
-	text-align: center;
 	background: #81b3d2;
 	padding: 45px 0 60px;
 }
 
 .container-features-item h2,
 .container-features-item span,
-.container-features-item p {
+.container-features-item p,
+.btn-open-search,
+input[type="submit"],
+.form-title,
+.filters label,
+.btn-form,
+.container-amenities a {
 	color: #fff;
+}
+
+.container-features-item h2,
+.reason-features-list h2,
+.container-reserve b,
+.form-title {
+	font-weight: bold;
 }
 
 .container-features-item h2,
 .reason-features-list h2 {
 	font-size: 21px;
-	font-weight: bold;
 }
 
 .container-reserve b {
 	font-size: 30px;
-	font-weight: bold;
 }
+
+input[type="submit"],
+.btn-open-search {
+	text-transform: uppercase;
+}
+
+/***HOTELS***/
+
+.filters,
+.search,
+.container-amenities,
+.main-footer {
+	padding: 30px 70px;
+}
+
+.filters{
+	background-image: url(../img/filter-bg.jpg);
+	background-repeat: no-repeat;
+}
+
+.form-title {
+	font-size: 16px;
+}
+
+.search,
+.container-amenities {
+	border-bottom: 2px solid #e5e5e5;
+}
+
+.search p,
+.navigation-search a {
+	font-size: 12px;
+}
+
+.navigation-search a {
+	color: #cacaca;
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.navigation-search a:hover {
+	border-bottom: none;
+	color: #81b3d2;
+}
+
+.container-amenities {
+	margin: 0;
+}
+
+.container-button-blue,
+.container-button-brown {
+	display: inline-block;
+	font-weight: bold;
+	padding: 2px 0;
+}
+
+.container-button-blue,
+.container-button-brown,
+.raiting {
+	text-align: center;
+}
+
+.container-button-blue {
+	width: 110px;
+	background: #81b3d2;
+}
+
+.container-button-brown {
+	width: 140px;
+	background: #766357;
+}
+
+.raiting {
+	padding: 2px 15px;
+	color: #666;
+	background: #f2f2f2;
+}
+
+
+
+
+
 	
