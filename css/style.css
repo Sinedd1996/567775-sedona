@@ -42,13 +42,14 @@ button {
 a {
 	text-decoration: none;
 }
-
+/*
 :focus {
 	outline: 0;
 	border-radius: 5px;
-	box-shadow: 0 0 0 2px white,
-				0 0 3px 5px #81b3d2;						
+	box-shadow: 0 0 0 1px white,
+				0 0 3px 3px #81b3d2;	
 }
+*/
 
 fieldset {
 	border: none;
@@ -67,10 +68,20 @@ fieldset {
 .navigation-item a {
 	color: #000;
 	font-weight: bold;
+
+	-webkit-transition: color .2s ease-in-out;
+	   -moz-transition: color .2s ease-in-out;
+		 -o-transition: color .2s ease-in-out;
+			transition: color .2s ease-in-out;
+}
+
+.navigation-item a:hover {
+	color: #766357;
 }
 
 .main,
-.promo-background {
+.promo-background,
+.main-footer {
 	width: 100%;
 }
 .promo-background,
@@ -93,10 +104,13 @@ fieldset {
 	content: '';
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	width: 1200px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
 	height: 57px;
 	background: url('../img/sedona-bg-bottom.png') no-repeat;
+	background-position: center bottom;
+	background-size: contain;
 }
 
 .reasons-list {
@@ -150,6 +164,53 @@ input[type="submit"],
 	text-transform: uppercase;
 }
 
+.btn-open-search,
+.btn-search  {
+	border: none;
+}
+
+
+.btn-open-search {
+	background-color: #766357;
+	padding: 35px 135px;
+}
+
+.btn-open-search:focus,
+.btn-search {
+	background-color: #81b3d2; 
+}
+
+.btn-open-search:focus {
+	outline: none;
+}
+
+.btn-search {
+	padding: 15px 195px;
+}
+
+.btn-search:hover,
+.container-button-blue:hover,
+.container-button-brown:hover,
+.social-button:hover {
+	opacity: .9;
+}
+
+.navigation-footer li{
+	margin-right: 5px;
+}
+
+.navigation-footer li:last-child {
+	margin-right: 0;
+}
+
+.social-button {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background-color: #81b3d2;
+	text-align: center;
+}
+
 /***HOTELS***/
 
 .filters,
@@ -162,6 +223,17 @@ input[type="submit"],
 .filters{
 	background-image: url(../img/filter-bg.jpg);
 	background-repeat: no-repeat;
+}
+
+.btn-form {
+	padding: 10px 35px;
+	background-color: inherit;
+	border: 2px solid white;
+}
+
+.btn-form:hover {
+	background-color: rgba(0, 0, 0, .25);
+	border-color: rgba(0, 0, 0, .25);
 }
 
 .form-title {
@@ -183,7 +255,8 @@ input[type="submit"],
 	border-bottom: 1px dotted #81b3d2;
 }
 
-.navigation-search a:hover {
+.navigation-search a:hover,
+.navigation-search .active-item {
 	border-bottom: none;
 	color: #81b3d2;
 }
@@ -205,13 +278,16 @@ input[type="submit"],
 	text-align: center;
 }
 
+.container-button-brown,	
 .container-button-blue {
-	width: 110px;
+	padding: 4px 15px;
+}
+
+.container-button-blue {
 	background: #81b3d2;
 }
 
 .container-button-brown {
-	width: 140px;
 	background: #766357;
 }
 
