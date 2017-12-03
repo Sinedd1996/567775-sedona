@@ -24,49 +24,37 @@
 			<div class="filters">
 				<form action="https://echo.htmlacademy.ru" method="post">
 					<fieldset>
-						<legend class="form-title">Инфрастрктура:</legend>
-							<div class="form-checkbox">	
-								<label  class="checkbox" for="pool-field">
-									<input class="checkbox" type="checkbox" id="pool-field" name="pool" checked>
-									<span class="new-checkbox"></span>Бассейн			
-								</label>
+						<legend class="form-title">Инфраструктура:</legend>
+							<div class="form-checkbox">
+								<input type="checkbox" id="pool-field" name="pool" checked>
+								<label  class="checkbox" for="pool-field">Бассейн</label>
 							</div>
 							<div class="form-checkbox">	
-								<label class="checkbox" for="parking-field">
-									<input type="checkbox" id="parking-field" name="parking">
-									<span class="new-checkbox"></span>Парковка
-								</label>
-								</div>	
+								<input type="checkbox" id="parking-field" name="parking">
+								<label class="checkbox" for="parking-field">Парковка</label>
+							</div>	
 							<div class="form-checkbox">	
-								<label class="checkbox" for="wifi-field">
-									<input type="checkbox" id="wifi-field" name="wifi">
-									<span class="new-checkbox"></span>Wi-fi
-								</label>
+								<input type="checkbox" id="wifi-field" name="wifi" disabled>
+								<label class="checkbox" for="wifi-field">Wi-fi</label>
 							</div>	
 					</fieldset>
 					<fieldset>
 						<legend class="form-title">Тип жилья:</legend>	
 							<div class="form-checkbox">		
-								<label class="checkbox" for="hotel-field">
-									<input type="checkbox" id="hotel-field" name="hotel" checked>
-									<span class="new-checkbox"></span>Гостиница
-							</label>
+								<input type="checkbox" id="hotel-field" name="hotel" checked>
+								<label class="checkbox" for="hotel-field">Гостиница</label>
 							</div>
 							<div class="form-checkbox">	
-								<label class="checkbox" for="motel-field">
-									<input type="checkbox" id="motel-field" name="motel" checked>
-									<span class="new-checkbox"></span>Мотель
-								</label>
+								<input type="checkbox" id="motel-field" name="motel" checked>
+								<label class="checkbox" for="motel-field">Мотель</label>
 							</div>
 							<div class="form-checkbox">	
-								<label class="checkbox" for="apartments-field">
-									<input type="checkbox" id="apartments-field" name="wifi" checked>
-									<span class="new-checkbox"></span>Апартаменты
-								</label>
+								<input type="checkbox" id="apartments-field" name="wifi" checked disabled>
+								<label class="checkbox" for="apartments-field">Апартаменты</label>
 							</div>
 					</fieldset>
 					<fieldset>
-						<div class="filter-range-title">Стоимость в сутки(Р):</div>
+						<div class="filter-range-title">Стоимость в сутки (Р):</div>
 						<div class="price-controls">
 							<label class="min-price" for="min-price">От <input type="text" name="min-price" value="0"></label>
 							<label class="max-price" for="max-price">До <input type="text" name="max-price" value="3000"></label>
