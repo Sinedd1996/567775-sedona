@@ -53,14 +53,6 @@ button {
 a {
 	text-decoration: none;
 }
-/*
-:focus {
-	outline: 0;
-	border-radius: 5px;
-	box-shadow: 0 0 0 1px white,
-				0 0 3px 3px #81b3d2;	
-}
-*/
 
 fieldset {
 	border: none;
@@ -170,7 +162,7 @@ fieldset {
 .main-navigation,
 .container-reserve,
 form,
-.reason-footer-item   {
+.reason-footer-item {
 	width: 100%;
 }
 .promo-background,
@@ -178,7 +170,7 @@ form,
 .container-features-item,
 .reason-features-list,
 .reasons-list-footer,
-.container-reserve{
+.container-reserve {
 	text-align: center;
 }
 
@@ -226,7 +218,7 @@ form,
 .reasons-list-footer h2,
 input[type="submit"],
 .btn-open-search,
-.found-search{
+.found-search {
 	font-size: 21px;
 	font-weight: bold;
 }
@@ -246,12 +238,21 @@ input[type="submit"],
 	width: 66.7%;
 	overflow: hidden;
 }
-|
-.features-top {
+
+.features-city,
+.features-mountains {
 	background-image: url("../img/sedona-city.jpg");
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.features-city {
+	background-image: url("../img/sedona-city.jpg");
+}
+
+.features-mountains {
+	background-image: url("../img/mountains.jpg");
 }
 
 .container-features-image img {
@@ -326,11 +327,11 @@ background-size: cover;
 	padding-top: 2px;
 }
 
-.reason-features-list li:nth-child(2) {
+.food-item {
 	padding-top: 4px;
 }
 
-.reason-features-list li:nth-child(2) svg{
+.food-item svg {
     margin-right: 3px;
 }
 
@@ -349,31 +350,31 @@ background-size: cover;
 	line-height: 21px;
 }
 
-.reason-features-list li:nth-of-type(2) h2 {
+.food-item h2 {
 	margin-bottom: 21px;
 }
 
-.reason-features-list li:nth-of-type(2) p {
+.food-item p {
 	width: 72%;
 }
 
-.reason-features-list li:nth-of-type(3) h2 {
+.souvenirs-item h2 {
 	padding-top: 3px;
 }
 
-.reason-features-list li:nth-of-type(3) p {
+.souvenirs-item p {
 	padding-left: 1px;
 }
 
 .reason-footer-item {
 	list-style: none;
 	padding: 46px 0;
-	padding-bottom: 60px;
+	padding-bottom: 30px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: distribute;
-	    justify-content: space-around;
+	justify-content: space-around;
 	background-color: #eeeeee;
 	text-align: center;
 }
@@ -391,6 +392,7 @@ background-size: cover;
 
 .reasons-list-footer p {
 	width: 68%;
+	padding-bottom: 28px;
 	margin: 0 auto;
 	margin-top: 5%;
 	margin-right: 16%;
@@ -509,9 +511,9 @@ input[type="submit"],
 
 .modal-error {
   -webkit-animation-name: shake;
-  animation-name: shake;
+  		  animation-name: shake;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  		  animation-duration: 1s;
 }
 
 .main-form label,
@@ -657,7 +659,7 @@ input[type="submit"],
 	display: flex;
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 	width: 85%;
 	margin: 0 auto;
 	padding-top: 33px;
@@ -665,7 +667,7 @@ input[type="submit"],
 }
 
 .footer-visit,
-.footer-copyright  {
+.footer-copyright {
 	margin: 0;
 	color: #000;
 }
@@ -683,11 +685,11 @@ input[type="submit"],
 			transition: fill .3s linear;
 }
 
-.footer-copyright a:hover svg {
+.copyright-list:hover svg {
 	fill: #81b3d2;
 }
 
-.footer-copyright a:active svg {
+.copyright-list:active svg {
 	fill: #bdbbbc;
 }
 
@@ -744,10 +746,11 @@ input[type="submit"],
 
 .footer-index {
 	margin-top: -117px;
-	
 }
 
-/**Кнопки Формы**/
+/**
+Кнопки Формы
+**/
 
 .btn-open-search {
 	width: 568px;
@@ -784,7 +787,7 @@ input[type="submit"],
 	border: none;
 }
 
-fieldset .btn-search  {
+fieldset .btn-search {
 	width: 100%;
 	margin: 0 auto;
 	padding: 16px 0;
@@ -810,7 +813,8 @@ fieldset .btn-search:active {
   	cursor: pointer;
 }
 
-.btn::before , .btn::after {
+.btn::before,
+.btn::after {
   	content: '';
   	position: absolute;
   	top: 20px;
@@ -826,11 +830,13 @@ fieldset .btn-search:active {
   	        transform: rotate(90deg);
 }
 
-.btn:hover::before , .btn:hover::after {
+.btn:hover::before,
+.btn:hover::after {
   	background-color: #000;
 }
 
-.btn:active::before , .btn:active::after {
+.btn:active::before,
+.btn:active::after {
   	background-color: #81b3d2;
 }
 
@@ -864,9 +870,13 @@ fieldset .btn-search:active {
 	background-color: #5496bd;
 }
 
-/*Кнопки Формы*/
+/**
+Кнопки Формы
+**/
 
-/***HOTELS***/
+/***
+HOTELS
+***/
 
 .filters {
 	padding: 26px 4%;
@@ -979,12 +989,12 @@ fieldset .btn-search:active {
 	margin-right: 95px;
 } 
 
-.filters fieldset:nth-of-type(2) {
+.home-choice {
 	width: 200px;
 	position: relative;
 }
 
-.filters fieldset:nth-of-type(2) .form-checkbox {
+.home-choice .form-checkbox {
 	padding-left: 20%;
 }
 
@@ -1109,7 +1119,7 @@ fieldset .btn-search:active {
 	left: 80%;
 }
 
-.filters fieldset label input[type="checkbox"] {
+.form-checkbox input[type="checkbox"] {
 	margin-right: 15px;
 }
 
@@ -1154,7 +1164,7 @@ fieldset .btn-search:active {
 	display: flex;
 }
 
-.search .container-align  {
+.search .container-align {
 	padding-right: 0;
 }
 
@@ -1178,7 +1188,7 @@ fieldset .btn-search:active {
 	        flex-direction: row;
 }
 
-.navigation-search{
+.navigation-search {
 	padding: 0;
 	margin: 0;
 }
@@ -1243,7 +1253,7 @@ fieldset .btn-search:active {
 }
 
 .container-amenities,
-.rate-stars{
+.rate-stars {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -1269,7 +1279,7 @@ fieldset .btn-search:active {
 	margin-bottom: 7px;
 }
 
-.container-amenities h2 a {
+.container-amenities .amenities-title {
 	color: #000;
 
 	-webkit-transition: color .3s ease-in-out;
@@ -1277,11 +1287,11 @@ fieldset .btn-search:active {
 			transition: color .3s ease-in-out;
 }
 
-.container-amenities h2 a:hover {
+.amenities-title:hover {
 	color: #81b3d2;
 }
 
-.container-amenities h2 a:active {
+.amenities-title:active {
 	color: #c1c1c1;
 }
 
@@ -1354,7 +1364,7 @@ fieldset .btn-search:active {
 }
 
 .navigation-search .active-item,
-.navigation-search a:active  {
+.navigation-search a:active {
 	border: none;
 }
 
@@ -1368,7 +1378,7 @@ fieldset .btn-search:active {
 
 .container-button-blue,
 .container-button-brown,
-.raiting  {
+.raiting {
 	display: inline-block;
 	padding: 2px 17px;
 	text-align: center;
