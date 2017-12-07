@@ -169,7 +169,8 @@ fieldset {
 .main-footer,
 .main-navigation,
 .container-reserve,
-form  {
+form,
+.reason-footer-item   {
 	width: 100%;
 }
 .promo-background,
@@ -245,6 +246,13 @@ input[type="submit"],
 	width: 66.7%;
 	overflow: hidden;
 }
+|
+.features-top {
+	background-image: url("../img/sedona-city.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
 
 .container-features-image img {
 	display: block;
@@ -280,6 +288,7 @@ input[type="submit"],
 	margin-top: 20px;
 	font-family: "PT Sans", Arial, sans-serif;
 	line-height: 21px;
+	padding-bottom: 59px;
 }
 
 .container-features-item .paragraph-item {
@@ -430,7 +439,8 @@ input[type="submit"],
 	margin-bottom: 47px;
 }
 
-.main-form-container {
+.modal-form-container {
+	display: block;
 	position: absolute;
 	width: 568px;
 	left: 50%;
@@ -440,9 +450,68 @@ input[type="submit"],
 	        transform: translateX(-50%);
 
 	-webkit-box-shadow: 5px 9px 86px -29px rgba(0,0,0,0.75);
-	   -moz-box-shadow: 5px 9px 86px -29px rgba(0,0,0,0.75);
 		    box-shadow: 5px 9px 86px -29px rgba(0,0,0,0.75);
 	z-index: 10;
+}
+
+.main-form {
+	display: none;
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+.modal-show {
+	display: block;
+	animation-name: bounceInLeft;
+	animation-duration: 1s;
+}
+
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+
+.modal-error {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .main-form label,
@@ -461,7 +530,6 @@ input[type="submit"],
 
 .main-form input[type="text"]:focus {
 	background-color: #fff;
-	outline-color: #e5e5e5;
 }
 
 .main-form fieldset {
@@ -509,6 +577,13 @@ input[type="submit"],
 	margin-left: auto;
 }
 
+.main-form-grownups,
+.main-form-kids {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
 .main-form-grownups button,
 .main-form-kids button {
 	margin-top: -8px;
@@ -526,7 +601,7 @@ input[type="submit"],
 	margin-left: 39px;
 }
 
-.main-form-kids .button-reduce  {
+.main-form-kids .button-reduce {
 	margin-left: 26px;
 }
 
@@ -534,17 +609,16 @@ input[type="submit"],
 	margin-left: auto;
 }
 
-.calendar-btn{
+.calendar-btn {
 	position: absolute;
 	background: inherit;
 	top: 0px;
 	right: 3px;
 	border: none;
 	cursor: pointer;
-	outline: none;
 }
 
-.calendar-btn svg{
+.calendar-btn svg {
 	fill: #cacaca;
 }
 
@@ -570,6 +644,11 @@ input[type="submit"],
 	height: 591px;
 	background: url(../img/map.jpg) no-repeat center;
 	background-position: 51% 98%;
+}
+
+.container-map iframe {
+	width: 100%;
+	frameborder: 0;
 }
 
 .container-footer {
@@ -604,11 +683,11 @@ input[type="submit"],
 			transition: fill .3s linear;
 }
 
-.footer-copyright a:hover svg{
+.footer-copyright a:hover svg {
 	fill: #81b3d2;
 }
 
-.footer-copyright a:active svg{
+.footer-copyright a:active svg {
 	fill: #bdbbbc;
 }
 
@@ -619,7 +698,7 @@ input[type="submit"],
 	font-weight: bolder;
 }
 
-.navigation-footer  {
+.navigation-footer {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -629,7 +708,7 @@ input[type="submit"],
 	padding-top: 4px;
 }
 
-.navigation-footer li{
+.navigation-footer li {
 	margin-right: 5px;
 }
 
@@ -705,10 +784,6 @@ input[type="submit"],
 	border: none;
 }
 
-.btn-open-search:focus {
-	outline: none;
-}
-
 fieldset .btn-search  {
 	width: 100%;
 	margin: 0 auto;
@@ -733,10 +808,6 @@ fieldset .btn-search:active {
   	background-color: #f2f2f2;
   	position: relative;
   	cursor: pointer;
-}
-
-.btn:focus {
-	outline-color: #e5e5e5;
 }
 
 .btn::before , .btn::after {
@@ -818,7 +889,6 @@ fieldset .btn-search:active {
 .filters form {
 	display: -webkit-box;
 	display: -moz-flex;
-	display: -moz-box;
 	display: -ms-flexbox;
 	display: -ms-flex;
 	display: -o-flex;
@@ -932,6 +1002,9 @@ fieldset .btn-search:active {
 }
 
 .price-controls {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	position: relative;
 	height: 36px;
 	font-size: 0;
@@ -963,25 +1036,38 @@ fieldset .btn-search:active {
 	text-align: center;
 }
 
-.price-controls .min-price,
+.price-controls .min-price {
+	margin-left: 18%;
+}
+
 .price-controls .max-price {
+	margin-left: 4%;
+}
+
+.price-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	width: 50%;
-	margin-left:;
 }
 
 .price-controls input {
-	width: 35px;
+	padding-left: 3%;
+	width: 33px;
+	font-size: 14px;
 	margin: 0; 
 	height: 32px;
-	color: inherit;
-	font: inherit; 
+	color: white;
 	background: none;
 	border: none;
 }
 
 .range-controls {
 	position: relative;
-	margin-bottom: 32px;
+	margin-bottom: 31px;
 }
 
 .range-controls .scale {
@@ -1027,11 +1113,16 @@ fieldset .btn-search:active {
 	margin-right: 15px;
 }
 
+.button-form {
+	width: 140px;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .btn-form {
   width: 135px;
-  height: 33px;
+  height: 34px;
   display: block;
-  margin: 0 auto;
   font-size: 14px;
   color: #ffffff;
   text-transform: uppercase;

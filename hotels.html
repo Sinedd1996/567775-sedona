@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   </head>
@@ -56,8 +56,14 @@
 					<fieldset>
 						<div class="filter-range-title">Стоимость в сутки (Р):</div>
 						<div class="price-controls">
-							<label class="min-price" for="min-price">От <input type="text" name="min-price" value="0"></label>
-							<label class="max-price" for="max-price">До <input type="text" name="max-price" value="3000"></label>
+							<div class="price-container">
+								<label class="min-price" for="min-price">От </label>
+								<input type="text" id="min-price" name="min-price" value="0">
+							</div>
+							<div class="price-container">
+								<label class="max-price" for="max-price">До </label>
+								<input type="text" id="max-price" name="max-price" value="3000">
+							</div>
 						</div>
 						<div class="range-controls">
 							<div class="scale">
@@ -66,7 +72,9 @@
 							<div class="range-toggle range-toggle-min"></div>
 							<div class="range-toggle range-toggle-max"></div>
 						</div>
-						<button class="btn-form">Показать</button>	
+						<div class="button-form">
+							<button class="btn-form">Показать</button>
+						</div>	
 					</fieldset>
 				</form>
 			</div>	
@@ -87,9 +95,9 @@
 			</div>
 
 			<figure class="container-amenities">
-				<div class="container-align">
+				<figcaption class="container-align">
 					<img class="hotel" src="img/hotel.jpg"  width="135" height="90" alt="Гостиница">
-					<figcaption>
+					<div class="main amenities">
 						<h2><a href="#">Amara Resort &amp; Spa</a></h2>
 						<div class="amenities-item">
 							<p>Гостиница</p>
@@ -98,7 +106,8 @@
 						<div class="amenities-item">
 							<p>От 4000 р.</p>
 							<a class="container-button-brown" href="#">Забронировать</a>
-					</figcaption>
+						</div>
+					</div>
 					<div class="container-rate">
 						<ul class="rate-stars">
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
@@ -108,23 +117,23 @@
 						</ul>
 						<span class="raiting">Рейтинг:8,5</span>
 					</div>
-				</div>
+				</figcaption>
 			</figure>
 
 			<figure class="container-amenities">
-				<div class="container-align">
+				<figcaption class="container-align">
 					<img class="motel" src="img/motel.jpg" width="135" height="90" alt="Мотель">
-					<figcaption>
+					<div class="main amenities">
 						<h2><a href="#">Desert Quail Inn</a></h2>
 						<div class="amenities-item">
 							<p>Мотель</p>
-							<a href="#" class="container-button-blue">Подробнее</a>
+							<a class="container-button-blue" href="#">Подробнее</a>
 						</div>
 						<div class="amenities-item">
 							<p>От 3000 р.</p>
-							<a href="#"class="container-button-brown">Забронировать</a>
+							<a class="container-button-brown" href="#">Забронировать</a>
 						</div>
-					</figcaption>
+					</div>
 					<div class="container-rate">
 						<ul class="rate-stars">
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
@@ -133,23 +142,23 @@
 						</ul>
 						<span class="raiting">Рейтинг:8,9</span>
 					</div>
-				</div>
+				</figcaption>
 			</figure>
 
 			<figure class="container-amenities">
-				<div class="container-align">
+				<figcaption class="container-align">
 					<img class="apartment" src="img/apartment.jpg" width="135" height="90" alt="Апартаменты">
-					<figcaption>
+					<div class="main amenities">
 						<h2><a href="#">Villas at Poco Diablo</a></h2>
 						<div class="amenities-item">
 							<p>Апартаменты</p>
-							<a href="#" class="container-button-blue">Подробнее</a>
+							<a class="container-button-blue" href="#">Подробнее</a>
 						</div>
 						<div class="amenities-item">
 							<p>От 2000 р.</p>
-							<a href="#"class="container-button-brown">Забронировать</a>
+							<a class="container-button-brown" href="#">Забронировать</a>
 						</div>
-					</figcaption>
+					</div>
 					<div class="container-rate">
 						<ul class="rate-stars">
 							<li class="rate-stars-item"><img src="img/star.svg" alt="Рейтинг"></li>
@@ -157,7 +166,7 @@
 						</ul>
 						<span class="raiting">Рейтинг:9,2</span>
 					</div>
-				</div>
+				</figcaption>
 			</figure>
 		</main>
 
@@ -166,19 +175,19 @@
 				<a class="footer-visit" href="#">#Visitsedona</a>
 					<ul class="navigation-footer">
 						<li>
-							<a href="#" class="social-button social-twitter">
+							<a class="social-button social-twitter" href="#">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15"><path fill="" d="M10.95.144c1.685-.496 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708a2.345 2.345 0 0 1-.857 1.768c.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75-3.175 11.217-10.077 11.082h-.446c-.41 0-4.164-.46-4.898-1.887 2.271.196 3.893-.422 4.693-1.177-.96-.3-2.679-.477-2.979-2.95.349.106.564.228 1.19.119C1.705 8.247.374 7.53.448 5.33c.285.328 1.067.536 1.34.472C1.085 5.561-.182 2.442.894.85c1.818 1.854 3.735 3.606 7.152 3.773C8.254 2.33 9.183.793 10.95.144z"/>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="social-button social-facebook">
+							<a class="social-button social-facebook" href="#">
 								<svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22"><path fill="" d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"/>
 								</svg>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="social-button social-youtube">
+							<a class="social-button social-youtube" href="#">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16"><path fill="" d="M17 0H3C1.35 0 0 1.35 0 3v10c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zM6.027 11.998V4.002L15.014 8l-8.987 3.998z"/>
 								</svg>
 							</a>
