@@ -5,7 +5,7 @@ var departureDate = popup.querySelector("#departure-date");
 var grownups = popup.querySelector("#grownups");
 var kids = popup.querySelector("#kids");
 var btnSearch = popup.querySelector(".btn-search");
-
+popup.classList.remove("modal-show");
 form_link.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	popup.classList.toggle("modal-show");
