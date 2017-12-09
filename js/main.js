@@ -13,10 +13,10 @@ form_link.addEventListener("click", function(evt) {
 });
 
 btnSearch.addEventListener("click", function (event) {
-  popup.classList.remove("modal-error");
-  popup.offsetWidth = popup.offsetWidth;
-  if (!(data.value && departureDate.value && grownups.value && kids.value)) {
-    event.preventDefault();
-    popup.classList.add("modal-error");
-  }
+	popup.classList.remove("modal-error");
+	popup.offsetWidth = popup.offsetWidth;
+	if (!(data.value && departureDate.value && grownups.value && kids.value)) {
+		event.preventDefault();
+		popup.classList.add("modal-error");
+	}
 });
