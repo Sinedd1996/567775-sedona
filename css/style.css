@@ -239,30 +239,21 @@ input[type="submit"],
 .container-features-image{
 	width: 66.7%;
 	overflow: hidden;
-}
-
-.features-city,
-.features-mountains {
-	background-image: url("../img/sedona-city.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
+	background-color: ##81b3d2;
 }
 
 .features-city {
 	background-color: #947e73;
 	background-image: url("../img/sedona-city.jpg");
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .features-mountains {
 	background-color: #db8f72;
 	background-image: url("../img/mountains.jpg");
 	background-repeat: no-repeat;
-}
-
-.container-features-image img {
-	display: block;
+	background-size: cover;
 }
 
 .container-features-item {
